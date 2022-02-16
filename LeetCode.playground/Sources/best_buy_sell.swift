@@ -61,5 +61,41 @@ public class buyAndSellSolution
         print("Max Profit = \(maxProfit)")
         return maxProfit
     }
+    //        [7,1,5,3,6,4]
+    static public func slidingWindow(_ stocks : [Int]) -> Int
+    {
+        print(stocks.count)
+        guard stocks.count > 0 else
+        {
+            return 0
+        }
+        var low = 0
+        var high = stocks.count-1
+        var min = stocks[low]
+        var max = stocks[high]
+        
+        while(low<high)
+        {
+            if stocks[low] < min
+            {
+                min = stocks[low]
+            }
+            if stocks[high] > max
+            {
+                max = stocks[high]
+            }
+            
+            low = low + 1
+            high = high - 1
+        }
+        print("min - \(min) , max - \(max)")
+        let profit =  max - min
+        if profit > 0
+        {
+            return profit
+        }else{
+            return 0
+        }
+    }
 }
 

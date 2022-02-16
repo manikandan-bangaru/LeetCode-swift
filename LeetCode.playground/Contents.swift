@@ -15,12 +15,23 @@
 //
 //print("--------------END----------------")
 //
-//let maxProfit =  buyAndSellSolution.MaxProfitForStocks([7,1,5,3,6,4])
-//
+//let maxProfit =  buyAndSellSolution.slidingWindow([7,2,5,3,6,4,1,9])
+////
 //print("Max Profit- \(maxProfit)")
+//print("--------------END----------------")
+//
+//let isWordPatternMatch = WordPatern.findWordPatternMatch("abba" , "dog cat cat dog")
+//
+//print("Word pattern match is - \(isWordPatternMatch)")
+//print("--------------END----------------")
+
+//let span = OnlineStockSpan.stocksSpanfor([100,80,60,70,60,75,85])
+//print("Span - \(span)")
+//print("--------------END----------------")
+//
+//let result = ContainsDuplicaiton.containsDupUsingSet([1,2,3,4])
+//print(result)
 print("--------------END----------------")
 
-let isWordPatternMatch = WordPatern.findWordPatternMatch("abba" , "dog cat cat dog")
-
-print("Word pattern match is - \(isWordPatternMatch)")
-print("--------------END----------------")
+let result = ProdOfArrayExpectSelf.prodOf([1,2,3,4])
+print(result)
