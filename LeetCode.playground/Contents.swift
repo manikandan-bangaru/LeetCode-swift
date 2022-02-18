@@ -27,7 +27,7 @@
 
 //let span = OnlineStockSpan.stocksSpanfor([100,80,60,70,60,75,85])
 //print("Span - \(span)")
-//print("--------------END----------------")
+//print("--------------END--w--------------")
 //
 //let result = ContainsDuplicaiton.containsDupUsingSet([1,2,3,4])
 //print(result)
@@ -35,3 +35,5 @@ print("--------------END----------------")
 
 let result = ProdOfArrayExpectSelf.prodOf([1,2,3,4])
 print(result)
+
+print("--------------END----------------")

@@ -45,34 +45,51 @@ public class ProdOfArrayExpectSelf
     }
     //Efficient O(n)
     
-    public static func prodOf(_ nums : [Int]) -> [Int]
+    public static func prodOf_withExtraMem(_ nums : [Int]) -> [Int]
     {
 //                    [1,2,3,4]
 //        prefix ->   [1,1,2,6]
 //        postfix ->  [24,12,4,1]
 //        result -> [prefix[i] * postfix[i]]
         
+//        time - o(n)
+//        space - o(n)
+        
         var prefix = Array(repeating : 1 , count : nums.count)
         var postfix =  Array(repeating : 1 , count : nums.count)
-//        postfix.reserveCapacity(nums.count)
-//        prefix.reserveCapacity(nums.count)
         var result = [Int]()
-        prefix.append(1)
-       
-        postfix[nums.count-1] = 1
-        print(postfix)
+
         for i in 1..<nums.count
         {
-            prefix.append(nums[i-1] * prefix[i-1])
+            prefix[i] = nums[i-1] * prefix[i-1]
         }
-        for i in (nums.count-2)...0
+        for i in (0...(nums.count-2)).reversed()
         {
             postfix[i] = nums[i+1] * postfix[i+1]
         }
                                     
-        for i in 0...nums.count-1
+        for i in 0..<nums.count
         {
             result.append(prefix[i] * postfix[i])
+        }
+        return result
+    }
+    public static func prodOf(_ nums : [Int]) -> [Int]
+    {
+//        [1,2,3,4]
+//        [1,1,]
+//        time - O(n)
+//        space - O(1)
+        var result = Array(repeating : 1 , count : nums.count)
+        for i in 1..<nums.count
+        {
+            result[i] = result[i-1] * nums[i-1]
+        }
+        var postFixMax = 1
+        for i in (0..<nums.count).reversed() 
+        {
+            result[i] = result[i] * postFixMax
+            postFixMax = postFixMax * nums[i]
         }
         return result
     }
