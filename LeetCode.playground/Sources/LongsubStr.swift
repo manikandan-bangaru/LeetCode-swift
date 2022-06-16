@@ -3,7 +3,6 @@ import Foundation
 extension String{
     
     func isContain(char : Character) -> Int?{
-        var index : Int? = nil
         
         if let idx = self.range(of: String(char)){
         

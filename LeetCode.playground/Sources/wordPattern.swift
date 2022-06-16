@@ -34,9 +34,7 @@ public class WordPatern
             {
                 if hashmap[key] != word
                 {
-                   
                    return false
-                   
                }
             }
             else if hashmap.values.contains(word)

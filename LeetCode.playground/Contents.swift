@@ -31,9 +31,14 @@
 //
 //let result = ContainsDuplicaiton.containsDupUsingSet([1,2,3,4])
 //print(result)
-print("--------------END----------------")
-
-let result = ProdOfArrayExpectSelf.prodOf([1,2,3,4])
-print(result)
-
+//print("--------------END----------------")
+//
+//let result = ProdOfArrayExpectSelf.prodOf([1,2,3,4])
+//print(result)
+//
+//print("--------------END----------------")
+//
+//let result = MaxSubArrayProd.solution( [2,3,-2,4])
+//print(result)
+//
 print("--------------END----------------")
