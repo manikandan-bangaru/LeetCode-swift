@@ -19,5 +19,8 @@ print("--------------Blind 75----------------")
 //question3.test(input: B3_Contains_DuplicateInput(nums: [1,2,3,4,5,1]))
 //question3.run_default_samples()
 
-
+//4
+let q4 = Blind75Type.b4_product_of_array
+q4.test(input: B4_ProdOfArrInput(nums: [1,2,3,4]))
+q4.run_default_samples()
 
