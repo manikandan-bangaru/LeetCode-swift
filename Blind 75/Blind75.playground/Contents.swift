@@ -20,7 +20,12 @@ print("--------------Blind 75----------------")
 //question3.run_default_samples()
 
 //4
-let q4 = Blind75Type.b4_product_of_array
-q4.test(input: B4_ProdOfArrInput(nums: [1,2,3,4]))
-q4.run_default_samples()
+//let q4 = Blind75Type.b4_product_of_array
+//q4.test(input: B4_ProdOfArrInput(nums: [1,2,3,4]))
+//q4.run_default_samples()
+
+// 5
+let q5 = Blind75Type.b5_max_subarray_sum
+q5.test(input: B5_MaxSubArrInput(nums: [-2,1,-3,4,-1,2,1,-5,4]))
+q5.run_default_samples()
 
