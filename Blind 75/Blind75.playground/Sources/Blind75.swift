@@ -4,11 +4,10 @@
 //
 //  Created by Manikandan Bangaru on 1/4/25.
 //
-public enum Blind75Type {
-    case b1_two_sum
-    case b2_buy_sell_stock
+public protocol Blind75Protocol {
+    func test(input: SampleInput)
+    func run_default_samples()
 }
-
 public protocol Blind75TypeProtocol {
     func test(input: SampleInput)
     func run_default_samples()
@@ -16,28 +15,31 @@ public protocol Blind75TypeProtocol {
 
 public protocol SampleInput {}
 
-public protocol Blind75Protocol {
-    func test(type: Blind75Type, input: SampleInput)
-    func run_default_samples(type: Blind75Type)
-}
 
-public class Blind75: Blind75Protocol {
-    public init() {}
-    public func test(type: Blind75Type, input: SampleInput) {
-        switch type {
+public enum Blind75Type : Blind75Protocol {
+    case b1_two_sum
+    case b2_buy_sell_stock
+    case b3_contains_duplicate
+    
+    public func test(input: SampleInput) {
+        switch self {
         case .b1_two_sum:
             B1_TwoSUM().test(input: input)
         case .b2_buy_sell_stock:
             B2_BuySellStock().test(input: input)
+        case .b3_contains_duplicate:
+            B3_Contains_Duplicate().test(input: input)
         }
     }
     
-    public func run_default_samples(type: Blind75Type) {
-        switch type {
+    public func run_default_samples() {
+        switch self {
         case .b1_two_sum:
             B1_TwoSUM().run_default_samples()
         case .b2_buy_sell_stock:
             B2_BuySellStock().run_default_samples()
+        case .b3_contains_duplicate:
+            B3_Contains_Duplicate().run_default_samples()
         }
     }
 }
