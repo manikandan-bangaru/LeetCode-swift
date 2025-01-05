@@ -39,7 +39,7 @@ public struct B1_twoSumInput: SampleInput {
 
 public struct B1_TwoSUM : Blind75TypeProtocol {
     public init () {
-        print("----------Blind75 1.Two Sum----------------")
+        print("----------Blind75 \(type(of: self))----------------")
     }
     
     func twoSum(nums: [Int], target: Int) -> (Int,Int)  {
@@ -53,7 +53,6 @@ public struct B1_TwoSUM : Blind75TypeProtocol {
             if let previsousValueIndex = dict[value] {
                 // Found the pair
                 return (previsousValueIndex,index)
-//                print("\(previsousValueIndex),\(index)")
             } else {
                 dict[target - value] = index
             }
